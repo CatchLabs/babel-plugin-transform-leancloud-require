@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-leancloud-require",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Transform LeanCloud's require('cloud/') to Node.js's require('./')",
   "main": "index.js",
   "scripts": {
