@@ -15,7 +15,10 @@ module.exports = function () {
                     var fromPath = _path.hub.file.log.filename.split(path.win32.sep).join(path.posix.sep);
                     var targetPath = modulePath.value;
                     var relativePath = path.posix.relative(path.dirname(fromPath), targetPath);
-                    console.log({fromPath, targetPath, relativePath});
+                    if (relativePath.indexOf('.') !== 0) {
+                        relativePath = './' + relativePath;
+                    }
+                    console.log(JSON.stringify({fromPath, targetPath, relativePath}));
                     modulePath.value = relativePath;
                 }
             }
